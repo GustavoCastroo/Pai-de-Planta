@@ -15,7 +15,7 @@ import {
     constructor(private readonly TiposPlantaService: TiposPlantaService) {}
   
     @Get()
-    getTiposPlantas(): Promise<TiposPlanta[]> {
+    getTiposPlanta(): Promise<TiposPlanta[]> {
       return this.TiposPlantaService.getAll();
     }
   

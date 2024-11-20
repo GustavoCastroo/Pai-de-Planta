@@ -14,7 +14,7 @@ export class TiposPlantaService {
   }
 
   async get(id: number): Promise<TiposPlanta> {
-    return this.repository.findOneBy({ id_tipos_planta: id });
+    return this.repository.findOneBy({ id_tipo_planta: id });
   }
 
   async create(tipoPlanta: TiposPlanta): Promise<TiposPlanta> {
@@ -23,13 +23,13 @@ export class TiposPlantaService {
 
   async update(id: number, tipoPlanta: TiposPlanta): Promise<TiposPlanta> {
     const existingTiposPlanta = await this.repository.findOneBy({
-      id_tipos_planta: id
+      id_tipo_planta: id
     });
     existingTiposPlanta.tipo = tipoPlanta.tipo;
     return this.repository.save(existingTiposPlanta);
   }
 
   async delete(id: number): Promise<void> {
-    this.repository.delete({ id_tipos_planta: id });
+    this.repository.delete({ id_tipo_planta: id });
   }
 }

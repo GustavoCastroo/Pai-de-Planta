@@ -1,0 +1,1 @@
+1 - Ao fazer o get de uma Planta, o campo 'tipo_planta não aparece, como resolver? Conferi no banco que ele foi salvo.
